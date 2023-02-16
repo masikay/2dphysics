@@ -27,16 +27,16 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\SDL2_gfx\SDL2_framerate.c">
+    <ClCompile Include="lib\SDL2\SDL2_framerate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\SDL2_gfx\SDL2_gfxPrimitives.c">
+    <ClCompile Include="lib\SDL2\SDL2_gfxPrimitives.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\SDL2_gfx\SDL2_imageFilter.c">
+    <ClCompile Include="lib\SDL2\SDL2_imageFilter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lib\SDL2_gfx\SDL2_rotozoom.c">
+    <ClCompile Include="lib\SDL2\SDL2_rotozoom.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Physics\Body.cpp">
@@ -51,7 +51,16 @@
     <ClCompile Include="src\Physics\CollisionDetection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Physics\Contact.cpp">
+    <ClCompile Include="src\Physics\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\VecN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\MatMN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\Constraint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,19 +74,19 @@
     <ClInclude Include="src\Graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\SDL2_gfx\SDL2_framerate.h">
+    <ClInclude Include="lib\SDL2\SDL2_framerate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\SDL2_gfx\SDL2_gfxPrimitives.h">
+    <ClInclude Include="lib\SDL2\SDL2_gfxPrimitives.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\SDL2_gfx\SDL2_gfxPrimitives_font.h">
+    <ClInclude Include="lib\SDL2\SDL2_gfxPrimitives_font.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\SDL2_gfx\SDL2_imageFilter.h">
+    <ClInclude Include="lib\SDL2\SDL2_imageFilter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\SDL2_gfx\SDL2_rotozoom.h">
+    <ClInclude Include="lib\SDL2\SDL2_rotozoom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Physics\Body.h">
@@ -96,6 +105,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Physics\Contact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\Constraint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\VecN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\MatMN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

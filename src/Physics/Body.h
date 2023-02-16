@@ -1,21 +1,13 @@
 #ifndef BODY_H
 #define BODY_H
 
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include "Vec2.h"
 #include "Shape.h"
 
-#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
-#include <SDL.h>
-#include <SDL_image.h>
-#else
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#endif
-
 struct Body
 {
-	bool isColliding = false;
-
 	// Linear motion
 	Vec2 position;
 	Vec2 velocity;
@@ -60,13 +52,18 @@ struct Body
 
 	void SetTexture(const char* textureFileName);
 
-	void ApplyImpulse(const Vec2& j);
-	void ApplyImpulse(const Vec2& j, const Vec2& r);
+	Vec2 LocalSpaceToWorldSpace(const Vec2& point) const;
+	Vec2 WorldSpaceToLocalSpace(const Vec2& point) const;
+
+	void ApplyImpulseLinear(const Vec2& j);
+	void ApplyImpulseAngular(const float j);
+	void ApplyImpulseAtPoint(const Vec2& j, const Vec2& r);
 
 	void IntegrateLinear(float dt);
 	void IntegrateAngular(float dt);
 
-	void Update(float dt);
+	void IntegrateForces(const float dt);
+	void IntegrateVelocities(const float dt);
 };
 
 #endif

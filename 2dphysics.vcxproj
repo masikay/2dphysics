@@ -71,24 +71,24 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib\SDL2_gfx;C:\Users\paolo\scoop\apps\sdl2\current\include\SDL2;C:\Users\paolo\scoop\apps\sdl2-image\current\include\SDL2_image;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib;C:\src\repos\vcpkg\installed\x64-windows\include\SDL2;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>C:\Users\paolo\scoop\apps\sdl2\current\lib;C:\Users\paolo\scoop\apps\sdl2-image\current\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\src\repos\vcpkg\installed\x64-windows\lib;C:\src\repos\vcpkg\installed\x64-windows\lib\manual-link;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib\SDL2_gfx;C:\Users\paolo\scoop\apps\sdl2\current\include\SDL2;C:\Users\paolo\scoop\apps\sdl2-image\current\include\SDL2_image;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib;C:\src\repos\vcpkg\installed\x64-windows\include\SDL2;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>C:\Users\paolo\scoop\apps\sdl2\current\lib;C:\Users\paolo\scoop\apps\sdl2-image\current\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\src\repos\vcpkg\installed\x64-windows\lib;C:\src\repos\vcpkg\installed\x64-windows\lib\manual-link;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib\SDL2_gfx;C:\Users\paolo\scoop\apps\sdl2\current\include\SDL2;C:\Users\paolo\scoop\apps\sdl2-image\current\include\SDL2_image;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib;C:\src\repos\vcpkg\installed\x64-windows\include\SDL2;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>C:\Users\paolo\scoop\apps\sdl2\current\lib;C:\Users\paolo\scoop\apps\sdl2-image\current\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\src\repos\vcpkg\installed\x64-windows\lib;C:\src\repos\vcpkg\installed\x64-windows\lib\manual-link;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib\SDL2_gfx;C:\Users\paolo\scoop\apps\sdl2\current\include\SDL2;C:\Users\paolo\scoop\apps\sdl2-image\current\include\SDL2_image;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\paolo\source\repos\2DPhysics\2dphysics\lib;C:\src\repos\vcpkg\installed\x64-windows\include\SDL2;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>C:\Users\paolo\scoop\apps\sdl2\current\lib;C:\Users\paolo\scoop\apps\sdl2-image\current\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\src\repos\vcpkg\installed\x64-windows\lib;C:\src\repos\vcpkg\installed\x64-windows\lib\manual-link;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -156,11 +156,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Physics\CollisionDetection.cpp" />
-    <ClCompile Include="lib\SDL2_gfx\SDL2_framerate.c" />
-    <ClCompile Include="lib\SDL2_gfx\SDL2_gfxPrimitives.c" />
-    <ClCompile Include="lib\SDL2_gfx\SDL2_imageFilter.c" />
-    <ClCompile Include="lib\SDL2_gfx\SDL2_rotozoom.c" />
-    <ClCompile Include="src\Physics\Contact.cpp" />
+    <ClCompile Include="lib\SDL2\SDL2_framerate.c" />
+    <ClCompile Include="lib\SDL2\SDL2_gfxPrimitives.c" />
+    <ClCompile Include="lib\SDL2\SDL2_imageFilter.c" />
+    <ClCompile Include="lib\SDL2\SDL2_rotozoom.c" />
+    <ClCompile Include="src\Physics\Constraint.cpp" />
+    <ClCompile Include="src\Physics\MatMN.cpp" />
     <ClCompile Include="src\Physics\Shape.cpp" />
     <ClCompile Include="src\Physics\Force.cpp" />
     <ClCompile Include="src\Physics\Body.cpp" />
@@ -168,15 +169,19 @@
     <ClCompile Include="src\Graphics.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Physics\Vec2.cpp" />
+    <ClCompile Include="src\Physics\VecN.cpp" />
+    <ClCompile Include="src\Physics\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Physics\CollisionDetection.h" />
-    <ClInclude Include="lib\SDL2_gfx\SDL2_framerate.h" />
-    <ClInclude Include="lib\SDL2_gfx\SDL2_gfxPrimitives.h" />
-    <ClInclude Include="lib\SDL2_gfx\SDL2_gfxPrimitives_font.h" />
-    <ClInclude Include="lib\SDL2_gfx\SDL2_imageFilter.h" />
-    <ClInclude Include="lib\SDL2_gfx\SDL2_rotozoom.h" />
+    <ClInclude Include="lib\SDL2\SDL2_framerate.h" />
+    <ClInclude Include="lib\SDL2\SDL2_gfxPrimitives.h" />
+    <ClInclude Include="lib\SDL2\SDL2_gfxPrimitives_font.h" />
+    <ClInclude Include="lib\SDL2\SDL2_imageFilter.h" />
+    <ClInclude Include="lib\SDL2\SDL2_rotozoom.h" />
+    <ClInclude Include="src\Physics\Constraint.h" />
     <ClInclude Include="src\Physics\Contact.h" />
+    <ClInclude Include="src\Physics\MatMN.h" />
     <ClInclude Include="src\Physics\Shape.h" />
     <ClInclude Include="src\Physics\Constants.h" />
     <ClInclude Include="src\Physics\Force.h" />
@@ -184,6 +189,8 @@
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\Graphics.h" />
     <ClInclude Include="src\Physics\Vec2.h" />
+    <ClInclude Include="src\Physics\VecN.h" />
+    <ClInclude Include="src\Physics\World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

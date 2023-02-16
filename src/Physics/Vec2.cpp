@@ -1,4 +1,3 @@
-
 #include "Vec2.h"
 #include <math.h>
 
